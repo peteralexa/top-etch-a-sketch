@@ -15,6 +15,10 @@ function add16x16GridElements() {
                 const gridElement = document.createElement("div");
                 gridElement.className = "grid-element";
                 row.appendChild(gridElement);
+
+                gridElement.addEventListener("mouseover", function() {
+                    gridElement.style.backgroundColor = "red";
+                });
             }
 
             grid.appendChild(row);
