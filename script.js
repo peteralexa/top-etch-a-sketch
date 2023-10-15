@@ -5,6 +5,8 @@ gridSizeBtn16.addEventListener("click", add16x16GridElements);
 
 let elementsAdded = false;
 
+const resetBtn = document.querySelector("#reset-btn")
+
 function add16x16GridElements() {
     if (!elementsAdded) {
         for (let i = 0; i < 16; i++) {
@@ -17,7 +19,7 @@ function add16x16GridElements() {
                 row.appendChild(gridElement);
 
                 gridElement.addEventListener("mouseover", function() {
-                    gridElement.style.backgroundColor = "red";
+                    this.style.backgroundColor = "red";
                 });
             }
 
@@ -25,5 +27,13 @@ function add16x16GridElements() {
         }
 
         elementsAdded = true;
+
+        const gridElements = document.querySelectorAll(".grid-element");
+
+        resetBtn.addEventListener("click", function() {
+            gridElements.forEach(function(gridElement) {
+                gridElement.style.backgroundColor = "white";
+            });
+        });
     }
 }

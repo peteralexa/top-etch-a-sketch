@@ -58,7 +58,7 @@ body {
     flex-shrink: 0;
     flex-basis: calc(100% / 16);
     aspect-ratio: 1;
-    background-color: aqua;
+    background-color: white;
     border: 1px solid black; 
 }
 
