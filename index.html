@@ -8,25 +8,34 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div id="container">
-        <div id="toggles">
-                <button id="reset-btn">RESET</button>
-                <button id="grid-size-btn" class="btn-16x16">16 x 16</button>
-                <button id="grid-size-btn" class="btn-32x32">32 x 32</button>
-                <button id="grid-size-btn" class="btn-48x48">48 x 48</button>
-                <button id="grid-size-btn" class="btn-64x64">64 x 64</button>
-                <button id="grid-size-btn" class="btn-80x80">80 x 80</button>
-                <button id="grid-size-btn" class="btn-96x96">96 x 96</button>
+    <div id="interface">
+        <div id="header">Etch-a-Sketch</div>
+        <div id="container">
+            <div id="toggles">
+                    <button id="reset-btn">RESET</button>
+                    <button id="grid-size-btn" class="btn-16x16">16 x 16</button>
+                    <button id="grid-size-btn" class="btn-32x32">32 x 32</button>
+                    <button id="grid-size-btn" class="btn-48x48">48 x 48</button>
+                    <button id="grid-size-btn" class="btn-64x64">64 x 64</button>
+                    <button id="grid-size-btn" class="btn-80x80">80 x 80</button>
+                    <button id="grid-size-btn" class="btn-96x96">96 x 96</button>
+            </div>
+            <div id="grid"></div>
+            <div id="toggles">
+                <input type="color" id="color-picker" value="#ff0000">
+                <button id="color-btn-preset" class="white" data-color="white"></button>
+                <button id="color-btn-preset" class="black" data-color="black"></button>
+                <button id="color-btn-preset" class="blue" data-color="blue"></button>
+                <button id="color-btn-preset" class="green" data-color="green"></button>
+                <button id="color-btn-preset" class="red" data-color="red"></button>
+                <button id="color-btn-rainbow" class="rainbow"></button>
+            </div>
         </div>
-        <div id="grid"></div>
-        <div id="toggles">
-            <input type="color" id="color-picker" value="#ff0000">
-            <button id="color-btn-preset" class="white" data-color="white">White</button>
-            <button id="color-btn-preset" class="black" data-color="black">Black</button>
-            <button id="color-btn-preset" class="blue" data-color="blue">Blue</button>
-            <button id="color-btn-preset" class="green" data-color="green">Green</button>
-            <button id="color-btn-preset" class="red" data-color="red">Red</button>
-            <button id="color-btn-rainbow" class="rainbow">Rainbow</button>
+        <div id="footer">
+            © 2023 | peteralexa 
+            <a href="https://github.com/peteralexa" target="_blank">
+              <img src="./images/github-logo.png" alt="Github icon">
+            </a>
         </div>
     </div>
 </body>
