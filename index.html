@@ -10,12 +10,24 @@
 <body>
     <div id="container">
         <div id="toggles">
-            <button id="reset-btn">RESET</button>
-            <div id="grid-size">
+                <button id="reset-btn">RESET</button>
                 <button id="grid-size-btn" class="btn-16x16">16 x 16</button>
-            </div>
+                <button id="grid-size-btn" class="btn-32x32">32 x 32</button>
+                <button id="grid-size-btn" class="btn-48x48">48 x 48</button>
+                <button id="grid-size-btn" class="btn-64x64">64 x 64</button>
+                <button id="grid-size-btn" class="btn-80x80">80 x 80</button>
+                <button id="grid-size-btn" class="btn-96x96">96 x 96</button>
         </div>
         <div id="grid"></div>
+        <div id="toggles">
+            <input type="color" id="color-picker" value="#ff0000">
+            <button id="color-btn-preset" class="white" data-color="white">White</button>
+            <button id="color-btn-preset" class="black" data-color="black">Black</button>
+            <button id="color-btn-preset" class="blue" data-color="blue">Blue</button>
+            <button id="color-btn-preset" class="green" data-color="green">Green</button>
+            <button id="color-btn-preset" class="red" data-color="red">Red</button>
+            <button id="color-btn-rainbow" class="rainbow">Rainbow</button>
+        </div>
     </div>
 </body>
 </html>
