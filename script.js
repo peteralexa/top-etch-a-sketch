@@ -46,14 +46,19 @@ intro.appendChild(introPara2);
 
 let selectedColor = "black";
 
-colorPicker.addEventListener("input", function() {
-    selectedColor = colorPicker.value;
-});
+let useRandomColor = false;
 
+colorPicker.addEventListener("input", function() {
+    useRandomColor = false;
+    if (useRandomColor === false) {
+        selectedColor = colorPicker.value};
+});
 
 presetColorBtns.forEach(function(presetBtn) {
     presetBtn.addEventListener("click", function() {
-        selectedColor = this.getAttribute("data-color");
+        useRandomColor = false;
+        if (useRandomColor === false) {
+            selectedColor = this.getAttribute("data-color")};
     });
 });
 
@@ -61,45 +66,20 @@ grid.addEventListener("dragstart", function (event) {
     event.preventDefault();
 });
 
-/* 
+const randomColorBtn = document.querySelector("#color-btn-random")
+randomColorBtn.addEventListener("click", function() {
+    useRandomColor = true;
+    if (useRandomColor === true) {
+        selectedColor = randomRgbColor()};
+});
 
-Template function to add square grid elements to grid. Replace x with grid size
-
-function add(Grid Size)GridElements() {
-    grid.innerHTML = "";
-
-    for (let i = 0; i < x; i++) {
-        const rowx = document.createElement("div");
-        rowx.className = "grid-rowx";
-
-        for (let j = 0; j < x; j++) {
-            const gridElementx = document.createElement("div");
-            gridElementx.className = "grid-elementx";
-            rowx.appendChild(gridElementx);
-
-            gridElementx.addEventListener("mouseover", function(event) {
-                if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
-                }
-            });
-
-            gridElementx.addEventListener("click", function() {
-                this.style.backgroundColor = selectedColor;
-            });
-        }
-
-        grid.appendChild(rowx);
-    }
-
-    const gridElementsx = document.querySelectorAll(".grid-elementx");
-
-    resetBtn.addEventListener("click", function() {
-        gridElementsx.forEach(function(gridElementx) {
-            gridElementx.style.backgroundColor = "white";
-        });
-    });
-} */
-
+function randomRgbColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let RgbColor = "rgb(" + r + "," + g + "," + b + ")";  
+    return RgbColor;
+  };
 
 function add16x16GridElements() {
     grid.innerHTML = "";
@@ -115,10 +95,13 @@ function add16x16GridElements() {
 
             gridElement16.addEventListener("mouseover", function(event) {
                 if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
+                    if (useRandomColor === true) {
+                        this.style.backgroundColor = randomRgbColor();
+                    } else {
+                        this.style.backgroundColor = selectedColor;
+                    }
                 }
             });
-
             gridElement16.addEventListener("click", function() {
                 this.style.backgroundColor = selectedColor;
             });
@@ -150,7 +133,11 @@ function add32x32GridElements() {
 
             gridElement32.addEventListener("mouseover", function(event) {
                 if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
+                    if (useRandomColor === true) {
+                        this.style.backgroundColor = randomRgbColor();
+                    } else {
+                        this.style.backgroundColor = selectedColor;
+                    }
                 }
             });
 
@@ -185,7 +172,11 @@ function add48x48GridElements() {
 
             gridElement48.addEventListener("mouseover", function(event) {
                 if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
+                    if (useRandomColor === true) {
+                        this.style.backgroundColor = randomRgbColor();
+                    } else {
+                        this.style.backgroundColor = selectedColor;
+                    }
                 }
             });
 
@@ -220,7 +211,11 @@ function add64x64GridElements() {
 
             gridElement64.addEventListener("mouseover", function(event) {
                 if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
+                    if (useRandomColor === true) {
+                        this.style.backgroundColor = randomRgbColor();
+                    } else {
+                        this.style.backgroundColor = selectedColor;
+                    }
                 }
             });
 
@@ -255,7 +250,11 @@ function add80x80GridElements() {
 
             gridElement80.addEventListener("mouseover", function(event) {
                 if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
+                    if (useRandomColor === true) {
+                        this.style.backgroundColor = randomRgbColor();
+                    } else {
+                        this.style.backgroundColor = selectedColor;
+                    }
                 }
             });
 
@@ -290,7 +289,11 @@ function add96x96GridElements() {
 
             gridElement96.addEventListener("mouseover", function(event) {
                 if (event.buttons === 1) {
-                    this.style.backgroundColor = selectedColor;
+                    if (useRandomColor === true) {
+                        this.style.backgroundColor = randomRgbColor();
+                    } else {
+                        this.style.backgroundColor = selectedColor;
+                    }
                 }
             });
 

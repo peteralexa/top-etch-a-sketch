@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Retro';
-    src: url('./fonts/RetroGraphics.ttf') format('truetype');
+    src: url(./fonts/SFRetroSpliceCondensed.ttf) format('truetype');
 }
 
 html {
@@ -113,8 +113,8 @@ body {
     background-color: red;
 }
 
-.rainbow {
-    background-color:  linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+.random {
+    background:  linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
 }
 
 #grid-size-btn {
@@ -155,7 +155,7 @@ body {
 
 #grid-size-btn,
 #color-btn-preset,
-#color-btn-rainbow {
+#color-btn-random {
     width: 100%;
     height: 20px;
     border-radius: 10px;
