@@ -33,6 +33,9 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 10%;
+    -moz-box-shadow: 0 0 30px #FF3131;
+    -webkit-box-shadow: 0 0 30px #FF3131;
+    box-shadow: 0 0 30px #FF3131;
 }
 
 #header {
