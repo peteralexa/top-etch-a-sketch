@@ -13,3 +13,5 @@ SF RetroSplice Font Family
 Made by ShyFoundry Fonts
 https://www.1001fonts.com/sf-retrosplice-font.html
 
+Live Preview:
+https://peteralexa.github.io/top-etch-a-sketch/
